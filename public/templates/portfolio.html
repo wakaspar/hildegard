@@ -1,0 +1,135 @@
+<head>
+  <link rel="stylesheet" href="/css/lightbox.css">
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <script type="text/javascript" src="/scripts/lightbox.js"></script>
+</head>
+
+<div class="ui container">
+  <div class="ui text menu">
+    <!-- Site name -->
+    <div class="item logo">
+      <a href="/" style="text-decoration:none;">
+        <h1 class="full-name">Will Kaspar</h1>
+        <p>web development</p>
+      </a>
+    </div>
+    <!-- Mobile nav button -->
+    <div class="right menu">
+      <div class="ui icon button" onclick="openNav()">
+        <i class="large bars icon"></i>
+      </div>
+      <!-- Mobile menu -->
+      <div id="nav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-links">
+          <a onclick="closeNav()" href="/portfolio">Portfolio</a>
+          <a onclick="closeNav()" href="/blog">Blog</a>
+          <a onclick="closeNav()" href="/about">About</a>
+        </div>
+      </div>
+    </div>
+    <!-- Desktop menu -->
+    <div id="menu" class="ui menu">
+      <a class="item" href="/portfolio">Portfolio</a>
+      <a class="item" href="/blog">Blog</a>
+      <a class="item" href="/about">About</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- PROJECT PORTFOLIO -->
+<div class="ui container">
+  <h2 class="">Project Portfolio</h2>
+  <div ng-controller="PortfolioController as portCtrl" class="stackable ui grid">
+    <!-- Project Card -->
+    <div ng-repeat="project in portCtrl.projectList" class="ui centered stackable grid">
+      <div class="column four wide">
+        <img src="/images/portfolio/{{ project.image }}.png" alt="p01" class="p-img ui fluid image centered">
+      </div>
+      <div class="column six wide">
+        <h4 class="my-sub-head">{{ project.name }}</h5>
+        <ul ng-repeat="detail in project.details">
+          <li>{{ detail.text }}</li>
+        </ul>
+      </div>
+      <div class="column five wide">
+        <ul>
+          <span style="font-size:2em;"><i ng-repeat="glyph in project.glyphs" class="devicon-{{ glyph.icon }}-plain"> </i></span>
+          <p><span class="p-info">Tech Used: </span><span ng-repeat="tech in project.tech">{{ tech.skill }} | </span></p>
+          <p><span class="p-info">My Role: </span>{{ project.role }}</p>
+          <span ng-repeat="button in project.buttons" class="">
+            <a class="ui mobile {{ button.color }} button" ng-href="{{ button.link }}" target="_blank"><i class="{{ button.icon }} icon" aria-hidden="true"></i>{{ button.name }}</a>
+          </span>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=""><br><hr><br></div>
+<!-- ARTWORK -->
+<div class="ui container">
+  <h2>Art</h2>
+  <p>A place to toss pictures of my doodles.</p>
+  <div class="ui hidden divider"></div>
+  <!-- Image Gallery TODO: serve this data as well, get this hard-coded
+nonsense out of here. -->
+  <div class="ui grid centered stackable">
+    <div class="column twelve wide">
+      <div class="ui small images">
+        <img src="/images/process/thumb1.jpg" onclick="openModal();currentSlide(1)">
+        <img src="/images/process/thumb2.jpg" onclick="openModal();currentSlide(2)">
+        <img src="/images/process/thumb3.jpg" onclick="openModal();currentSlide(3)">
+        <img src="/images/process/thumb4.jpg" onclick="openModal();currentSlide(4)">
+        <img src="/images/process/thumb5.jpg" onclick="openModal();currentSlide(5)">
+        <img src="/images/process/thumb6.jpg" onclick="openModal();currentSlide(6)">
+        <img src="/images/process/thumb7.jpg" onclick="openModal();currentSlide(7)">
+        <img src="/images/process/thumb8.jpg" onclick="openModal();currentSlide(8)">
+        <img src="/images/process/thumb9.jpg" onclick="openModal();currentSlide(9)">
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <div class="my-slides">
+        <img src="/images/process/p1.jpg" class="ui big centered image">
+      </div>
+      <div class="my-slides">
+        <img src="/images/process/p2.jpg" class="ui big centered image">
+      </div>
+      <div class="my-slides">
+        <img src="/images/process/p4.jpg" class="ui big centered image">
+      </div>
+      <div class="my-slides">
+        <img src="/images/process/p6.jpg" class="ui big centered image">
+      </div>
+      <div class="my-slides">
+        <img src="/images/process/p8.jpg" class="ui big centered image">
+      </div>
+      <div class="my-slides">
+        <img src="/images/process/p9.jpg" class="ui big centered image">
+      </div>
+      <div class="my-slides">
+        <img src="/images/process/p10.jpg" class="ui big centered image">
+      </div>
+      <div class="my-slides">
+        <img src="/images/process/p11.jpg" class="ui big centered image">
+      </div>
+      <div class="my-slides">
+        <img src="/images/process/p13.jpg" class="ui big centered image">
+      </div>
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer style="bottom:0;height:4.5vh;width:100vw;background-color:#e1e1e1;">
+  <p style="text-align:center;">&copy 2018 Friendly Ghost Industries</p>
+</footer>

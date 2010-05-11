@@ -1,36 +1,34 @@
-/* Angular Application Definition - Highwind */
+/* Angular Application Definition - Hildegard */
 var app = angular
-  .module('Highwind', ['ngRoute'])
+  .module('Hildegard', ['ngRoute'])
   .config(config);
 
   config.$inject = ['$routeProvider', '$locationProvider'];
 
   function config($routeProvider, $locationProvider){
     /* AngularJS sanity check */
-    console.log('angular working');
+    // console.log('angular working');
 
     /* Defines AngularJS client-side routing.  When the templateUrl is reached
     by a user, the corresponding controller & template are engaged. */
     $routeProvider
       .when('/', {
         templateUrl: 'templates/home.html',
-        controller: 'HomeController'
+        controller: 'HomeController',
+        controllerAs: 'homeCtrl'
       })
       .when('/portfolio', {
         templateUrl: 'templates/portfolio.html',
-        controller: 'PortfolioController'
+        controller: 'PortfolioController',
+        controllerAs: 'portCtrl'
       })
-      .when('/art', {
-        templateUrl: 'templates/art.html',
-        controller: 'ArtController'
+      .when('/blog', {
+        templateUrl: 'templates/blog.html',
+        controller: 'BlogController',
+        controllerAs: 'blogCtrl'
       })
       .when('/about', {
-        templateUrl: 'templates/about.html',
-        controller: 'AboutController'
-      })
-      .when('/contact', {
-        templateUrl: 'templates/contact.html',
-        controller: 'ContactController'
+        templateUrl: 'templates/about.html'
       })
 
       /* Enables HTML5 mode */

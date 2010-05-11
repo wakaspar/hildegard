@@ -1,7 +1,7 @@
 // Lightbox.js is a super simple custom JavaScript lightbox
 
 // Sanity Check
-console.log('lightbox.js loaded');
+// console.log('lightbox.js loaded');
 
 // Open the Modal
 function openModal() {
