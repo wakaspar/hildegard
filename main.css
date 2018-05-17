@@ -1,0 +1,193 @@
+/* NOTE: Main.css: Holds CSS classes & definitions for index.html & any child pages */
+/*
+  HTML COLOR KEY:
+    #ffffff = white-panel;
+    #e1e1e1 = light-panel;
+    #9e9e9e = dark-panel;
+    #a9a9a9 = dark grey bg;
+    #808080 = grey bg;
+    #ff7f50 = coral;
+*/
+
+/* Catch-all for any default margins */
+* {
+  margin: 0em;
+}
+
+/* Attempts to set all anchors to look the same */
+/* (TODO:not sure this is working */
+a {
+  text-decoration: underline;
+  color: #000000;
+}
+
+header {
+  top: 0px;
+  display: block;
+  position: fixed;
+  z-index: 4;
+  width: 100vw;
+  height: 0.5vh;
+  background-color: #000000;
+}
+
+/* Removes some default Semantic UI menu styling */
+#menu {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+#menu a {
+  color: #000000;
+}
+
+/* Builds site header logo */
+.logo h1  {
+  /*font-family: 'Mina', cursive;*/
+  font-weight: 150;
+  font-weight: 500;
+  margin: 0em;
+}
+
+.logo a p {
+  margin-top: -0.5em;
+  margin-left: .5em;
+}
+
+.logo a h1,
+.logo a p {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Builds custom content break */
+.my-divider {
+  height: 10px;
+  width: 100vw;
+  background-color: #000000;
+}
+
+/* Gives padding where needed */
+.header-pad {
+  padding: 2%;
+}
+
+.menu-spacer {
+  top: 0px;
+  width: 100vw;
+  height: 12.5vh;
+}
+
+
+
+/* Define white/light/dark backgrounds for content panels */
+.white-panel {
+  background-color: #ffffff;
+}
+.light-panel {
+  background-color: #e1e1e1;
+}
+.dark-panel {
+  background-color: #9e9e9e;
+}
+
+/* Controls Default Background Behavior */
+.bg-holder {
+  position: static;
+  top: 0;
+  left: 0;
+  height: 50vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #000000;
+  background-attachment: fixed;
+}
+
+
+/* MOBILE CSS */
+/* Keeps hamburger menu off the edge of the screen */
+.right.menu {
+  padding-right: 2.5%;
+}
+/* Hamburger menu styling */
+.ui.icon.button {
+  background-color: #000000;
+  height: 42.5px;
+}
+.large.bars.icon {
+  color: #ffffff;
+}
+/* Mobile overlay styling */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.75);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.overlay-links {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: left;
+    margin-top: 5%;
+}
+.overlay a {
+    padding: 1.2%;
+    text-decoration: none;
+    font-size: 36px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #ff7f50;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 2.5%;
+    right: 12%;
+    font-size: 4em;
+}
+
+/* MEDIA QUERIES */
+/* Change mobile link font-size & 'x' position @ screen size < 450px */
+@media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 2em;
+        top: 15px;
+        right: 35px;
+    }
+}
+/* Toggles between initials & full name if screen size < 600px */
+@media screen and (min-width: 600px) {
+  .ui.icon.button {
+    display: none;
+  }
+  .initials {
+    /*display: none;*/
+  }
+}
+@media screen and (max-width: 600px) {
+  #menu {
+    display: none;
+  }
+  .full-name {
+    /*display: none;*/
+  }
+}
+/* Fixes .bg-holder for tablet screens */
+/* TODO: Currently diagnosing problem, this is just a placeholder */
+@media screen and (max-width: 900px) {
+  .bg-holder {
+  }
+}

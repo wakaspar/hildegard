@@ -1,0 +1,126 @@
+<!-- Template for home.html -->
+<head>
+  <link rel="stylesheet" href="public/css/home.css">
+</head>
+
+<!-- Site name, navigation, introduction, & recent projects -->
+<div class="ui container">
+  <div class="ui text menu">
+    <!-- Site name -->
+    <div class="item logo">
+      <a href="/" style="text-decoration:none;">
+        <h1 class="full-name">Will Kaspar</h1>
+        <p>web development</p>
+      </a>
+    </div>
+    <!-- Mobile nav button -->
+    <div class="right menu">
+      <div class="ui icon button" onclick="openNav()">
+        <i class="large bars icon"></i>
+      </div>
+      <!-- Mobile menu -->
+      <div id="nav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-links">
+          <a onclick="closeNav()" href="/portfolio">Portfolio</a>
+          <a onclick="closeNav()" href="/art">Blog</a>
+          <a onclick="closeNav()" href="/about">About</a>
+        </div>
+      </div>
+    </div>
+    <!-- Desktop menu -->
+    <div id="menu" class="ui menu">
+      <a class="item" href="/portfolio">Portfolio</a>
+      <a class="item" href="/art">Blog</a>
+      <a class="item" href="/about">About</a>
+    </div>
+  </div>
+  <!-- Welcome & recent projects -->
+  <div class="ui stackable grid container" style="background-color:coral;">
+    <div class="column eight wide">
+      <!-- Introduction -->
+      <div class="">
+        <p>Welcome! I'm a San Francisco-based web developer. Building web applications for desktop & mobile.  This is my personal website.</p>
+        <br>
+        <p>I've built several projects from scratch, from simple static sites to full-stack applications</p>
+        <br>
+        <p>I'm passionate about working in front-end design.  Lately, I've been working on helping with a client rebranding effort.</p>
+      </div>
+    </div>
+    <!-- Recent project carousel -->
+    <div class="column eight wide">
+      <h3 class="">Recent projects</h3>
+      <p>carousel will go here one day.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Contact & links -->
+<div class="ui container" style="background-color:lightgreen;">
+  <div class="">
+    <div class="ui centered stackable grid">
+      <!-- Contact -->
+      <div class="column eight wide">
+        <ul style="list-style:none;">
+          <li>
+            <div class="consult">
+              <a class="ui medium black label" href="https://docs.google.com/document/d/1xNb-GrPAKV5n2TqJ9olB0tRYqCDMKjxN05M9AXQo8HQ/edit?usp=sharing" target="_blank">
+                <i class="big file alternate red icon" aria-hidden="true"></i>
+                Take a resume
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="consult">
+              <a class="ui medium black label" href="mailto:wakaspar@gmail.com" target="_blank">
+                <i class="big envelope open green icon" aria-hidden="true"></i>
+                Send an email
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="consult">
+              <a class="ui medium black label" href="https://www.linkedin.com/in/wakaspar/" target="_blank">
+                <i class="big linkedin blue icon" aria-hidden="true"></i>
+                Connect on LinkedIn
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Links -->
+      <div class="column eight wide">
+        <h3>Links</h3>
+        <ul>
+          <li>
+            <a class="quicklink" href="/art">Dev Blog</a>
+          </li>
+          <li>
+            <a class="quicklink" href="/portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a class="quicklink" href="/about">About Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Blog -->
+<div class="ui container" style="background-color:dodgerblue;">
+  <h2 class="">Blog</h2>
+  <div class="ui centered stackable grid container">
+    <div class="column eight wide">
+      <p>column one</p>
+    </div>
+    <div class="column eight wide">
+      <p>column two</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer style="position:fixed;bottom:0;height:4.5vh;width:100vw;background-color:#e1e1e1;">
+  <p style="text-align:center;">c 2018 Friendly Ghost Industries</p>
+</footer>
