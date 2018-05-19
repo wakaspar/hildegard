@@ -58,6 +58,13 @@ app.get('/api/projects', function allBooks(req, res){
     res.send(projects);
   })
 })
+// Get all articles
+app.get('/api/articles', function allBooks(req, res){
+  db.Article.find(function(err, articles){
+    if(err){console.log('GET /api/articles error: ', err);}
+    res.send(articles);
+  })
+})
 
 /* Server Catch-all */
 // redirect all other paths to index

@@ -1,7 +1,19 @@
 var db = require('./models')
 
-// Currently [6] projects long
+// ARTICLES: Currently [0] projects long
+var articleList = [];
+// PROJECTS: Currently [6] projects long
 var projectList = [];
+
+articleList.push({
+  "title": "Hello World!",
+  "date": "1526760117095",
+  "author": "Will Kaspar",
+  "body": [ {"paragraph":"Welcome to my blog!"},
+          {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+          {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+          {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."} ]
+});
 
 projectList.push ({
   "name": "FreeGoldWatch",
@@ -147,12 +159,16 @@ projectList.push ({
   "image": "dng"
 });
 
-
-
+// Remove old articles & create new ones
+db.Article.remove({}, function(err, articles){
+  db.Article.create(articleList, function(err, articles){
+    if (err) { return console.log('ERROR', err); }
+    console.log("created", articles.length, "articles");
+  });
+});
+// Remove old projects, create new ones, & exit process
 db.Project.remove({}, function(err, projects){
-  // code in here runs after all classes are removed
   db.Project.create(projectList, function(err, projects){
-    // code in here runs after all classes are created
     if (err) { return console.log('ERROR', err); }
     console.log("created", projects.length, "projects");
     process.exit();
