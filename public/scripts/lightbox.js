@@ -5,7 +5,7 @@
 
 // Open the Modal
 function openModal(image) {
-  let lightbox = document.getElementById('myModal').style.display = "block";
+  document.getElementById('myModal').style.display = "block";
 }
 
 // Close the Modal

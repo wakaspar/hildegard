@@ -9,23 +9,24 @@ var projectList = [];
 
 // articleList: newest --> oldest
 articleList.push({
+  "title": "wakaspar.com - v.3.0: Hildegard",
+  "date": 1526764527926,
+  "author": "Will Kaspar",
+  "body": [ {"paragraph":"Welcome to Hildegard! This blog post is meant to serve as a development journal for this new, full-stack peronal web application I've launched."},
+          {"paragraph":"Continuing my recent convetion of naming personal projects after old airships from different Final Fantasy games, I've decided to name this project, 'Hildegard,' and it will thusly be referred to as such. The idea for Hildegard was rather starightforward - I was tired of having to rebuild my personal website everytime I wanted to feature a new project.  There was just so much copy-pasta every few weeks that I was getting rather annoyed."},
+          {"paragraph":"The next motivation was to build a place where I could easily store my thoughts and processes, as well as the occasional ToDo list, to help me keep track of where I'm at and what I'm doing with current projects.  I also wanted this 'blog' element to function flexibly, but scale effortlessly."},
+          {"paragraph":"My solution was to build a MEAN stack application that features two main tables: Articles & Projects.  The Articles table populates the blog with all the information you could want for a blog post, but keeps the format open - a 'post' can double as a 'todo list' or more of a 'journal entry', as this post is serving."},
+          {"paragraph":"I'm happy to have a place to store my thoughts, and it's been very fulfilling to build an application for my own personal use.  Stretch goals include: fixing date formatting for blog posts and findiing a better solution for scaling my lightbox.  Dates are currently stored in the database in their INT ms form, so I know that I need to convert them back to readable strings at some point.  I just haven't quite figured out where angular wants me to do that.  Working with the JavaScript Date() object is easy enough.  Ideally, I want my lightbox to simply scan a page for images and build a gallery out of whatever is there.  I'm close, but I'm having trouble with the angular code passing values into a seperate JavaScript file.  More research is necessary."} ]
+});
+articleList.push({
   "title": "Hello World!",
   "date": 1526760117095,
   "author": "Will Kaspar",
   "body": [ {"paragraph":"Welcome to my blog!"},
-          {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-          {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-          {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."} ]
+          {"paragraph":"This blog is meant to serve as a development journal, ToDo list repository, and perhaps storage for certain developer notes."},
+          {"paragraph":"I'll update as often as necessary."} ]
 });
-articleList.push({
-  "title": "Test One",
-  "date": 1526764527926,
-  "author": "Will Kaspar",
-  "body": [ {"paragraph":"This is a test post."},
-          {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-          {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-          {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."} ]
-});
+
 
 // imageList: art & process gallery
 imageList.push({
@@ -175,7 +176,7 @@ projectList.push ({
           {"icon":"sass"},
           {"icon":"css3"},
           {'icon':"html5"} ],
-  "image": "lcm"
+  "image": "whd"
 });
 projectList.push ({
   "name": "OurCade",
