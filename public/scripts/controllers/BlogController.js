@@ -4,15 +4,13 @@ angular
 
 BlogController.$inject = ['$http'];
 function BlogController($http){
-  // console.log('BlogController works!');
-
   let vm = this;
   // Get all articles
   $http({
     method: 'GET',
     url: '/api/articles'
   }).then(function successCallback(res) {
-    // set vm.projectList to full reponse
+    // set vm.articleList to full reponse
     vm.articleList = res.data;
     console.log('$http: ', vm);
   }, function errorCallback(res) {

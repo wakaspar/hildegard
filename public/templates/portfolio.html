@@ -1,9 +1,9 @@
 <head>
   <link rel="stylesheet" href="/css/lightbox.css">
   <link rel="stylesheet" href="/css/portfolio.css">
-  <script type="text/javascript" src="/scripts/lightbox.js"></script>
 </head>
 
+<!-- SITE NAME & MENU -->
 <div class="ui container">
   <div class="ui text menu">
     <!-- Site name -->
@@ -37,10 +37,12 @@
   </div>
 </div>
 
-
 <!-- PROJECT PORTFOLIO -->
 <div class="ui container">
   <h2 class="">Project Portfolio</h2>
+  <div class="">
+    <hr><br>
+  </div>
   <div ng-controller="PortfolioController as portCtrl" class="stackable ui grid">
     <!-- Project Card -->
     <div ng-repeat="project in portCtrl.projectList" class="ui centered stackable grid">
@@ -70,23 +72,23 @@
 <div class=""><br><hr><br></div>
 <!-- ARTWORK -->
 <div class="ui container">
-  <h2>Art</h2>
-  <p>A place to toss pictures of my doodles.</p>
+  <h2>Art & Process</h2>
+  <p>I draw a lot.  Whether for a coding project, a work of art, or just random doodling.  Here's a collection of some of my favorites:</p>
   <div class="ui hidden divider"></div>
-  <!-- Image Gallery TODO: serve this data as well, get this hard-coded
-nonsense out of here. -->
+
+  <!-- Image Gallery -->
   <div class="ui grid centered stackable">
     <div class="column twelve wide">
-      <div class="ui small images">
-        <img src="/images/process/thumb1.jpg" onclick="openModal();currentSlide(1)">
-        <img src="/images/process/thumb2.jpg" onclick="openModal();currentSlide(2)">
-        <img src="/images/process/thumb3.jpg" onclick="openModal();currentSlide(3)">
-        <img src="/images/process/thumb4.jpg" onclick="openModal();currentSlide(4)">
-        <img src="/images/process/thumb5.jpg" onclick="openModal();currentSlide(5)">
-        <img src="/images/process/thumb6.jpg" onclick="openModal();currentSlide(6)">
-        <img src="/images/process/thumb7.jpg" onclick="openModal();currentSlide(7)">
-        <img src="/images/process/thumb8.jpg" onclick="openModal();currentSlide(8)">
-        <img src="/images/process/thumb9.jpg" onclick="openModal();currentSlide(9)">
+      <div class="ui tiny images">
+        <img src="/images/process/thumb1.jpg" onclick="openModal();currentSlide(1);">
+        <img src="/images/process/thumb2.jpg" onclick="openModal();currentSlide(2);">
+        <img src="/images/process/thumb3.jpg" onclick="openModal();currentSlide(3);">
+        <img src="/images/process/thumb4.jpg" onclick="openModal();currentSlide(4);">
+        <img src="/images/process/thumb5.jpg" onclick="openModal();currentSlide(5);">
+        <img src="/images/process/thumb6.jpg" onclick="openModal();currentSlide(6);">
+        <img src="/images/process/thumb7.jpg" onclick="openModal();currentSlide(7);">
+        <img src="/images/process/thumb8.jpg" onclick="openModal();currentSlide(8);">
+        <img src="/images/process/thumb9.jpg" onclick="openModal();currentSlide(9);">
       </div>
     </div>
   </div>
@@ -96,40 +98,66 @@ nonsense out of here. -->
     <span class="close cursor" onclick="closeModal()">&times;</span>
     <div class="modal-content">
       <div class="my-slides">
-        <img src="/images/process/p1.jpg" class="ui big centered image">
+        <img src="/images/process/p1.jpg" class="ui fluid centered image">
       </div>
       <div class="my-slides">
-        <img src="/images/process/p2.jpg" class="ui big centered image">
+        <img src="/images/process/p2.jpg" class="ui fluid centered image">
       </div>
       <div class="my-slides">
-        <img src="/images/process/p4.jpg" class="ui big centered image">
+        <img src="/images/process/p4.jpg" class="ui fluid centered image">
       </div>
       <div class="my-slides">
-        <img src="/images/process/p6.jpg" class="ui big centered image">
+        <img src="/images/process/p6.jpg" class="ui fluid centered image">
       </div>
       <div class="my-slides">
-        <img src="/images/process/p8.jpg" class="ui big centered image">
+        <img src="/images/process/p8.jpg" class="ui fluid centered image">
       </div>
       <div class="my-slides">
-        <img src="/images/process/p9.jpg" class="ui big centered image">
+        <img src="/images/process/p9.jpg" class="ui fluid centered image">
       </div>
       <div class="my-slides">
-        <img src="/images/process/p10.jpg" class="ui big centered image">
+        <img src="/images/process/p10.jpg" class="ui fluid centered image">
       </div>
       <div class="my-slides">
-        <img src="/images/process/p11.jpg" class="ui big centered image">
+        <img src="/images/process/p11.jpg" class="ui fluid centered image">
       </div>
       <div class="my-slides">
-        <img src="/images/process/p13.jpg" class="ui big centered image">
+        <img src="/images/process/p13.jpg" class="ui fluid centered image">
       </div>
-      <!-- Next/previous controls -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+</div>
+
+
+<!-- Angular Routed Image Gallery TODO: figure out an Angular lightbox solution -->
+<!-- <div class="ui grid centered stackable">
+  <div class="column twelve wide">
+    <div class="ui tiny images">
+      <img ng-repeat="image in portCtrl.imageList" src="/images{{ image.thumb }}" lightbox="{{ image.source }}" ng-click="console.log('hi');">
     </div>
   </div>
 </div>
 
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <div class="my-slides">
+      <img src="" class="ui fluid centered image">
+    </div>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div> -->
+
+<br>
+
 <!-- Footer -->
-<footer style="bottom:0;height:4.5vh;width:100vw;background-color:#e1e1e1;">
-  <p style="text-align:center;">&copy 2018 Friendly Ghost Industries</p>
+<footer style="bottom:0;height:4.5vh;width:100vw;text-align:center;">
+  &copy 2018 Friendly Ghost Industries
 </footer>
+
+<!-- Enables Lightbox on all images -->
+<script type="text/javascript" src="/scripts/lightbox.js"></script>

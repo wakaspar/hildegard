@@ -1,9 +1,8 @@
-<!-- BLOG: Article Index -->
+<!-- ARTICLE: Article show page -->
 <head>
   <link rel="stylesheet" href="/css/blog.css">
 </head>
-
-<!-- Site Name & Menu -->
+<!-- Header & Menu -->
 <div class="ui container">
   <div class="ui text menu">
     <!-- Site name -->
@@ -37,12 +36,18 @@
   </div>
 </div>
 
-<!-- Dev Blog Block -->
 <div class="ui container">
-  <h2>Development Blog</h2>
-  <div class=""><hr><br></div>
-  <div ng-repeat="article in blogCtrl.articleList" class="">
-    <a ng-href="blog/{{ article._id }}" style="text-decoration:none;color:black;"><h3 style="display:inline;">{{ article.title }}</h3><p style="padding-left:2%;">{{ article.date }}</p></a>
+  <h2><a href="/blog" style="text-decoration:none;color:black;">Development Blog /</a></h2>
+  <div class="">
+    <hr><br>
+  </div>
+  <div ng-repeat="article in articleCtrl" class="">
+    <h3 style="display:inline;">{{ article.title }}</h3>
+    <p>by: {{ article.author }}; {{ article.date }}</p>
+    <div ng-repeat="body in article.body" class="">
+      <br>
+      <p>{{ body.paragraph }}</p>
+    </div>
   </div>
 </div>
 

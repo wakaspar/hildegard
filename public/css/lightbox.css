@@ -4,23 +4,22 @@
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  /*padding-top: 100px;*/
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: scroll;
   background-color: rgba(255,255,255,0.75);
 }
 /* Modal content */
 .modal-content {
-  margin: auto;
-  padding-bottom: 20px;
+  margin: 5% 10%;
 }
 /* 'Close' button */
 .close {
   color: black;
-  position: absolute;
+  position: fixed;
   top: 85px;
   right: 25px;
   font-size: 35px;
@@ -35,7 +34,7 @@
 /* 'Next' & 'previous' button styling */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 50%;
   width: auto;
   padding: 16px;
@@ -53,6 +52,7 @@
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+
 /* Adds a black, semi-transparent background color on hover */
 .prev:hover,
 .next:hover {

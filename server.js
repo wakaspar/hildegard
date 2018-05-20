@@ -44,26 +44,41 @@ app.get('/', function (req, res){
 app.get('/profile', function (req, res){
   res.send(profile);
 })
-// Serves html files from /templates
+// Serves html files from /templates for Angular's routes in app.js
 app.get('/templates/:name', function templates(req, res) {
   var name = req.params.name;
-  res.sendFile(__dirname + '/views/templates/' + name + '.html');
+  res.sendFile(__dirname + 'public/templates/' + name + '.html');
 });
 
 /* JSON Endpoints */
 // Get all projects
-app.get('/api/projects', function allBooks(req, res){
+app.get('/api/projects', function allProjects(req, res){
   db.Project.find(function(err, projects){
     if(err){console.log('GET /api/projects error: ', err);}
     res.send(projects);
   })
 })
-// Get all articles
-app.get('/api/articles', function allBooks(req, res){
+// Get all image reference objects
+app.get('/api/images', function allImages(req, res){
+  db.Image.find(function(err, images){
+    if(err){console.log('GET /api/images error: ', err);}
+    res.send(images);
+  })
+})
+// Get all blog articles
+app.get('/api/articles', function allArticles(req, res){
   db.Article.find(function(err, articles){
     if(err){console.log('GET /api/articles error: ', err);}
     res.send(articles);
   })
+})
+// Get one article
+app.get('/api/articles/:articleId', function oneArticle
+(req, res){
+  db.Article.findById(req.params.articleId, function(err, article) {
+    if(err) { console.log('GET /api/articles/:id error', err); }
+    res.json(article);
+  });
 })
 
 /* Server Catch-all */

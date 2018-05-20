@@ -13,22 +13,27 @@ var app = angular
     by a user, the corresponding controller & template are engaged. */
     $routeProvider
       .when('/', {
-        templateUrl: 'templates/home.html',
+        templateUrl: '/templates/home.html',
         controller: 'HomeController',
         controllerAs: 'homeCtrl'
       })
       .when('/portfolio', {
-        templateUrl: 'templates/portfolio.html',
+        templateUrl: '/templates/portfolio.html',
         controller: 'PortfolioController',
         controllerAs: 'portCtrl'
       })
       .when('/blog', {
-        templateUrl: 'templates/blog.html',
+        templateUrl: '/templates/blog.html',
         controller: 'BlogController',
         controllerAs: 'blogCtrl'
       })
       .when('/about', {
-        templateUrl: 'templates/about.html'
+        templateUrl: '/templates/about.html'
+      })
+      .when('/blog/:id', {
+        templateUrl: '/templates/article.html',
+        controller: 'ArticleController',
+        controllerAs: 'articleCtrl'
       })
 
       /* Enables HTML5 mode */

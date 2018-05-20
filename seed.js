@@ -3,18 +3,87 @@ var db = require('./models')
 // ARTICLES: Currently [0] projects long
 var articleList = [];
 // PROJECTS: Currently [6] projects long
+var imageList = [];
+// PROJECTS: Currently [6] projects long
 var projectList = [];
 
+// articleList: newest --> oldest
 articleList.push({
   "title": "Hello World!",
-  "date": "1526760117095",
+  "date": 1526760117095,
   "author": "Will Kaspar",
   "body": [ {"paragraph":"Welcome to my blog!"},
           {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
           {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
           {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."} ]
 });
+articleList.push({
+  "title": "Test One",
+  "date": 1526764527926,
+  "author": "Will Kaspar",
+  "body": [ {"paragraph":"This is a test post."},
+          {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+          {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+          {"paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."} ]
+});
 
+// imageList: art & process gallery
+imageList.push({
+  "caption":"coding notebook sketches",
+  "thumb":"/process/thumb1.jpg",
+  "source":"/images/process/p1.jpg",
+  "slideIndex":1
+})
+imageList.push({
+  "caption":"coding notebook sketches",
+  "thumb":"/process/thumb2.jpg",
+  "source":"/images/process/p2.jpg",
+  "slideIndex":2
+})
+imageList.push({
+  "caption":"coding notebook sketches",
+  "thumb":"/process/thumb3.jpg",
+  "source":"/images/process/p3.jpg",
+  "slideIndex":3
+})
+imageList.push({
+  "caption":"coding notebook sketches",
+  "thumb":"/process/thumb4.jpg",
+  "source":"/process/p4.jpg",
+  "slideIndex":4
+})
+imageList.push({
+  "caption":"coding notebook sketches",
+  "thumb":"/process/thumb5.jpg",
+  "source":"/images/process/p5.jpg",
+  "slideIndex":5
+})
+imageList.push({
+  "caption":"coding notebook sketches",
+  "thumb":"/process/thumb6.jpg",
+  "source":"/images/process/p6.jpg",
+  "slideIndex":6
+})
+imageList.push({
+  "caption":"coding notebook sketches",
+  "thumb":"/process/thumb7.jpg",
+  "source":"/images/process/p7.jpg",
+  "slideIndex":7
+})
+imageList.push({
+  "caption":"coding notebook sketches",
+  "thumb":"/process/thumb8.jpg",
+  "source":"/images/process/p8.jpg",
+  "slideIndex":8
+})
+imageList.push({
+  "caption":"coding notebook sketches",
+  "thumb":"/process/thumb9.jpg",
+  "source":"/images/process/p9.jpg",
+  "slideIndex":9
+})
+
+// projectList: newest --> oldest
 projectList.push ({
   "name": "FreeGoldWatch",
   "buttons":[ {"name":"demo","link":"http://freegoldwatch.herokuapp.com/", "icon":"external alternate", "color":"green"},
@@ -164,6 +233,13 @@ db.Article.remove({}, function(err, articles){
   db.Article.create(articleList, function(err, articles){
     if (err) { return console.log('ERROR', err); }
     console.log("created", articles.length, "articles");
+  });
+});
+// Remove old image refs & create new ones
+db.Image.remove({}, function(err, images){
+  db.Image.create(imageList, function(err, images){
+    if (err) { return console.log('ERROR', err); }
+    console.log("created", images.length, "images");
   });
 });
 // Remove old projects, create new ones, & exit process

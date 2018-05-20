@@ -95,10 +95,10 @@
         <h3>Links</h3>
         <ul>
           <li>
-            <a class="quicklink" href="/art">Dev Blog</a>
+            <a class="quicklink" href="/portfolio">Portfolio</a>
           </li>
           <li>
-            <a class="quicklink" href="/portfolio">Portfolio</a>
+            <a class="quicklink" href="/art">Dev Blog</a>
           </li>
           <li>
             <a class="quicklink" href="/about">About Me</a>
@@ -114,17 +114,18 @@
 <!-- Blog -->
 <div class="ui container">
   <h2 class="">Blog</h2>
-  <div class="ui centered stackable grid container">
-    <div class="column eight wide">
-      <p>column one</p>
-    </div>
-    <div class="column eight wide">
-      <p>column two</p>
-    </div>
+  <div ng-repeat="article in homeCtrl.articleList" class="ui container">
+    <div style="padding:0% 2%;">
+      <a ng-href="blog/{{ article._id }}" style="text-decoration:none;color:black;"><h4 style="display:inline;">{{ article.title }}</h4></a>
+      <a ng-href="blog/{{ article._id }}" style="text-decoration:none;color:black;"><p style="float:right;" class="article-date">{{ article.date }}</p></a>
   </div>
 </div>
 
+<br>
+
 <!-- Footer -->
-<footer style="position:fixed;bottom:0;height:4.5vh;width:100vw;background-color:#e1e1e1;">
-  <p style="text-align:center;">&copy 2018 Friendly Ghost Industries</p>
+<footer style="position:absolute;right:0;bottom:0;left:0;padding:.5em;text-align:center;">
+  &copy 2018 Friendly Ghost Industries
 </footer>
+
+<script type="text/javascript" src="/scripts/ui.js"></script>

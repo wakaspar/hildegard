@@ -4,8 +4,8 @@
 // console.log('lightbox.js loaded');
 
 // Open the Modal
-function openModal() {
-  document.getElementById('myModal').style.display = "block";
+function openModal(image) {
+  let lightbox = document.getElementById('myModal').style.display = "block";
 }
 
 // Close the Modal
