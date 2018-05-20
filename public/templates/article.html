@@ -36,13 +36,13 @@
   </div>
 </div>
 
-<div class="ui container">
-  <h2><a href="/blog" style="text-decoration:none;color:black;">Development Blog /</a></h2>
+<div ng-repeat="article in articleCtrl" class="ui container">
+  <h2><a href="/blog" style="text-decoration:none;color:black;">Development Blog / {{ article.title }}</a></h2>
   <div class="">
     <hr><br>
   </div>
-  <div ng-repeat="article in articleCtrl" class="">
-    <h3 style="display:inline;">{{ article.title }}</h3>
+  <div class="">
+    <!-- <h3 style="display:inline;">{{ article.title }}</h3> -->
     <p>by: {{ article.author }}; {{ article.date }}</p>
     <div ng-repeat="body in article.body" class="">
       <br>

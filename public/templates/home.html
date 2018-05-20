@@ -2,6 +2,7 @@
 <head>
   <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/slideshow.css">
+  <script type="text/javascript" src="/scripts/ui.js"></script>
   <script type="text/javascript" src="/scripts/slideshow.js"></script>
 </head>
 
@@ -42,7 +43,7 @@
   <div class="ui stackable grid container">
     <div class="column eight wide">
       <!-- Introduction -->
-      <div class="">
+      <div class="intro">
         <p>Welcome! I'm a San Francisco-based web developer. Building web applications for desktop & mobile.  This is my personal website.</p>
         <br>
         <p>I've built several projects from scratch, from simple static sites to full-stack applications.  I build in MEAN stack & Ruby on Rails.</p>
@@ -55,16 +56,16 @@
       <h3 class="">Recent projects</h3>
       <div class="slideshow-container">
         <div class="mySlides fade">
-          <img src="/images/portfolio/fgw.png" style="width:100%">
-          <div class="text"><a style="text-decoration:none;color:black;" href="/portfolio">FreeGoldWatch, Pinball Arcade & Print Shop | SF, CA</a></div>
+          <a href="https://www.flywheelcoffeeevents.com/" target="_blank"><img src="/images/portfolio/fce.png" style="width:100%"></a>
+          <div class="text"><a style="text-decoration:none;color:black;" href="https://www.flywheelcoffeeevents.com/" target="_blank">Flywheel Coffee Events | SF, CA</a></div>
         </div>
         <div class="mySlides fade">
-          <img src="/images/portfolio/fce.png" style="width:100%">
-          <div class="text"><a style="text-decoration:none;color:black;" href="/portfolio">Flywheel Coffee Events | SF, CA</a></div>
+          <a href="http://freegoldwatch.herokuapp.com/" target="_blank"><img src="/images/portfolio/fgw.png" style="width:100%"></a>
+          <div class="text"><a style="text-decoration:none;color:black;" href="http://freegoldwatch.herokuapp.com/" target="_blank">FreeGoldWatch, Pinball Arcade & Print Shop | SF, CA</a></div>
         </div>
         <div class="mySlides fade">
-          <img src="/images/portfolio/whd.png" style="width:100%">
-          <div class="text"><a style="text-decoration:none;color:black;" href="/portfolio">WeHuddle | personal team project</a></div>
+          <a href="http://wehuddle.herokuapp.com/" target="_blank"><img src="/images/portfolio/whd.png" style="width:100%"></a>
+          <div class="text"><a style="text-decoration:none;color:black;" href="http://wehuddle.herokuapp.com/" target="_blank">WeHuddle | personal team project</a></div>
         </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -86,7 +87,7 @@
           <li>
             <div class="consult">
               <a class="ui medium black label" href="https://docs.google.com/document/d/1xNb-GrPAKV5n2TqJ9olB0tRYqCDMKjxN05M9AXQo8HQ/edit?usp=sharing" target="_blank">
-                <i class="big file alternate red icon" aria-hidden="true"></i>
+                <i class="big file alternate white icon" aria-hidden="true"></i>
                 Take a resume
               </a>
             </div>
@@ -94,15 +95,15 @@
           <li>
             <div class="consult">
               <a class="ui medium black label" href="mailto:wakaspar@gmail.com" target="_blank">
-                <i class="big envelope open green icon" aria-hidden="true"></i>
-                Send an email
+                <i class="big envelope open white icon" aria-hidden="true"></i>
+                Send me an email
               </a>
             </div>
           </li>
           <li>
             <div class="consult">
               <a class="ui medium black label" href="https://www.linkedin.com/in/wakaspar/" target="_blank">
-                <i class="big linkedin blue icon" aria-hidden="true"></i>
+                <i class="big linkedin white icon" aria-hidden="true"></i>
                 Connect on LinkedIn
               </a>
             </div>
@@ -131,20 +132,19 @@
 <div class=""><br><hr><br></div>
 
 <!-- Blog -->
-<div class="ui container">
-  <h2 class="">Blog</h2>
+<div class="ui container feed">
+  <h2>Blog</h2>
   <div ng-repeat="article in homeCtrl.articleList" class="ui container">
     <div style="padding:0% 2%;">
       <a ng-href="blog/{{ article._id }}" style="text-decoration:none;color:black;"><h4 style="display:inline;">{{ article.title }}</h4></a>
       <a ng-href="blog/{{ article._id }}" style="text-decoration:none;color:black;"><p style="float:right;" class="article-date">{{ article.date }}</p></a>
+    </div>
   </div>
 </div>
 
 <br>
 
 <!-- Footer -->
-<footer style="position:absolute;right:0;bottom:0;left:0;padding:.5em;text-align:center;">
+<footer style="bottom:0;height:4.5vh;width:100vw;text-align:center;">
   &copy 2018 Friendly Ghost Industries
 </footer>
-
-<script type="text/javascript" src="/scripts/ui.js"></script>

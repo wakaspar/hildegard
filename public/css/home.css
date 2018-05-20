@@ -5,24 +5,14 @@ img {
   border: 2px solid black;
 }
 
-/* Page-specific background settings */
-#home {
-  top: 200;
-  height: 100vh;
-  background-color: #000000;
-  background-image: url('../images/hw-bg-6.65.svg');
-  transform: scaleX(-1);
-}
-#bg-two {
-  top: 200;
-  background-color: #000000;
-  background-image: url('../images/hw-bg-8.34.svg');
+.feed {
+  margin-bottom: 10%;
 }
 
 /* Gives padding to 'welcome' message */
-.greeting {
-  padding: 0% 5%;
-}
+/*.intro {
+  margin-top: 2.75em;
+}*/
 
 /* 'Reach Out' menu styling */
 .consult a {
@@ -36,12 +26,4 @@ img {
 .quicklink {
   text-decoration: underline;
   color: #000000;
-}
-
-/* MEDIA QUERIES */
-/* Sets #home background height to 50vh on screens < 1000px */
-@media screen and (max-width: 1000px) {
-  #home {
-    height:50vh;
-  }
 }

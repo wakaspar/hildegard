@@ -1,12 +1,4 @@
-/* NOTE: Art.css: Holds CSS classes & definitions for templates/art.html */
-
-/* Page-specific background settings */
-#home {
-  top: 200;
-  background-color: #a9a9a9;
-  background-image: url('../images/hw-bg-2.3.svg');
-}
-#bg-two {
-  background-color: #808080;
-  background-image: url('../images/hw-bg-2.3.svg');
+/* NOTE: Blog.css: Holds CSS classes & definitions for templates/blog.html */
+.blog-container {
+  margin-bottom: 10%;
 }
