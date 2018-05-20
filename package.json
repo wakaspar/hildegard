@@ -1,5 +1,6 @@
 {
-  "name": "highwind",
+  "name": "hildegard",
+  "description": "full-stack personal development application",
   "version": "1.0.0",
   "engines": {
     "node": "7.4.0",
