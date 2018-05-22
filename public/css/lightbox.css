@@ -14,13 +14,17 @@
 }
 /* Modal content */
 .modal-content {
-  margin: 5% 15%;
+  margin: 10vh 25vh;
 }
+.modal-content img {
+  /*max-height: 80%;*/
+}
+
 /* 'Close' button */
 .close {
   color: black;
   position: fixed;
-  top: 85px;
+  top: 50px;
   right: 25px;
   font-size: 35px;
   font-weight: bold;
