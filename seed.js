@@ -132,6 +132,7 @@ projectList.push ({
           {"skill":".liquid"},
           {"skill":"Adobe Photoshop"},
           {"skill":"Adobe Illustrator"},
+          {"skill":"CSS3"},
           {"skill":"HTML5"} ],
   "glyphs": [ {"icon":"wordpress"},
           {"icon":"photoshop"},
