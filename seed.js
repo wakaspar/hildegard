@@ -9,6 +9,15 @@ var projectList = [];
 
 // articleList: newest --> oldest
 articleList.push({
+  "title": "List Test",
+  "date": 1527034539078,
+  "author": "Will Kaspar",
+  "body": [ {"paragraph":"This article tests list implementation."},
+          {"list":"One"},
+          {"list":"Two"},
+          {"list":"Three"} ]
+});
+articleList.push({
   "title": "wakaspar.com - v.3.0: Hildegard",
   "date": 1526764527926,
   "author": "Will Kaspar",
@@ -136,8 +145,8 @@ projectList.push ({
   "buttons": [ {"name":"in production", "link":"https://www.flywheelcoffeeevents.com/", "icon":"external alternate", "color":"blue"} ],
   "details": [ {"text":"Squarespace site for local beverage catering company"},
           {"text":"Functioning state machine controls the movement of print orders in database."},
-          {"text":"Improves responsive design / UX of the business's current website."},
-          {"text":"Interacts with the PinballMap & Instagram APIs"} ],
+          {"text":"ImproveD responsive design / UX of the business's current website."},
+          {"text":"Improved SEO, resulting in increased business for client" ],
   "role": "Consulting web developer & designer",
   "tech": [ {"skill":"Squarespace CMS"},
           {"skill":"Adobe Photoshop"},
