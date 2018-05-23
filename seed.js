@@ -146,7 +146,7 @@ projectList.push ({
   "details": [ {"text":"Squarespace site for local beverage catering company"},
           {"text":"Functioning state machine controls the movement of print orders in database."},
           {"text":"ImproveD responsive design / UX of the business's current website."},
-          {"text":"Improved SEO, resulting in increased business for client" ],
+          {"text":"Improved SEO, resulting in increased business for client"} ],
   "role": "Consulting web developer & designer",
   "tech": [ {"skill":"Squarespace CMS"},
           {"skill":"Adobe Photoshop"},
