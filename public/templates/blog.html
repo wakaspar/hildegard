@@ -44,12 +44,7 @@
   <div ng-repeat="article in blogCtrl.articleList" class="">
     <a ng-href="blog/{{ article._id }}" style="text-decoration:none;color:black;"><h3 style="display:inline;">{{ article.title }}</h3><p style="padding-left:2%;">{{ article.date }}</p></a>
     <div ng-repeat="body in article.body" class="container">
-      <br>
-      </p>{{ body.paragraph }}</p>
-      <ul ng-model="article-list" ng-init="article-list=false">
-
-      </ul>
-      <li ng-if="{{ body.list }}">{{ body.list }}</li>
+      <p style="padding-top: 2%;">{{ body.paragraph }}</p>
     </div>
     <div class=""><br><hr><br></div>
   </div>

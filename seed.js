@@ -9,11 +9,11 @@ var projectList = [];
 
 // articleList: newest --> oldest
 articleList.push({
-  "title": "Hildegard ToDo's:",
+  "title": "Hildegard ToDo's",
   "date": 1527034539078,
   "author": "Will Kaspar",
-  "body": [ {"paragraph":"This article is a list of things that need to be finished on this website."},
-          {"paragraph":"blog list implementation | convert date strings to readable format | lightbox window scaling | automate lightbox galleries by page layout | project lightbox & process lightbox are seperate instances."} ]
+  "body": [ {"paragraph":"This article is a list of things that need to be finished on this website:"},
+          {"paragraph":"blog list implementation | convert date strings to readable format | lightbox window scaling | automate lightbox galleries by page layout; project & process are seperate instances | accent colors? (i like coral) | automate article layout (indents & photos) | "} ]
 });
 articleList.push({
   "title": "wakaspar.com - v.3.0: Hildegard",
@@ -29,8 +29,7 @@ articleList.push({
   "date": 1526760117095,
   "author": "Will Kaspar",
   "body": [ {"paragraph":"Welcome to my blog!"},
-          {"paragraph":"This blog is meant to serve as a development journal, ToDo list repository, and perhaps storage for certain developer notes."},
-          {"paragraph":"I'll update as often as necessary."} ]
+          {"paragraph":"This blog is meant to serve as a development journal, ToDo list repository, and perhaps storage for certain developer notes."} ]
 });
 
 

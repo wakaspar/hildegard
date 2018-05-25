@@ -16,6 +16,8 @@
 .modal-content {
   margin: 10vh 25vh;
 }
+
+/* TODO: get lightbox to crop image size to window size, ~90vh */
 .modal-content img {
   /*max-height: 80%;*/
 }
