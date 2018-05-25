@@ -43,7 +43,7 @@ header {
 
 /* Builds site header logo */
 .logo h1  {
-  /*font-family: 'Mina', cursive;*/
+  font-family: 'Mina', cursive;
   font-weight: 150;
   font-weight: 500;
   margin: 0em;

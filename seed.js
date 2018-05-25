@@ -9,21 +9,18 @@ var projectList = [];
 
 // articleList: newest --> oldest
 articleList.push({
-  "title": "List Test",
+  "title": "Hildegard ToDo's:",
   "date": 1527034539078,
   "author": "Will Kaspar",
-  "body": [ {"paragraph":"This article tests list implementation."},
-          {"list":"One"},
-          {"list":"Two"},
-          {"list":"Three"} ]
+  "body": [ {"paragraph":"This article is a list of things that need to be finished on this website."},
+          {"paragraph":"blog list implementation | convert date strings to readable format | lightbox window scaling | automate lightbox galleries by page layout | project lightbox & process lightbox are seperate instances."} ]
 });
 articleList.push({
   "title": "wakaspar.com - v.3.0: Hildegard",
   "date": 1526764527926,
   "author": "Will Kaspar",
-  "body": [ {"paragraph":"Welcome to Hildegard! This blog post is meant to serve as a development journal for this new, full-stack peronal web application I've launched."},
-          {"paragraph":"Continuing my recent convetion of naming personal projects after old airships from different Final Fantasy games, I've decided to name this project, 'Hildegard,' and it will thusly be referred to as such. The idea for Hildegard was rather starightforward - I was tired of having to rebuild my personal website everytime I wanted to feature a new project.  There was just so much copy-pasta every few weeks that I was getting rather annoyed."},
-          {"paragraph":"The next motivation was to build a place where I could easily store my thoughts and processes, as well as the occasional ToDo list, to help me keep track of where I'm at and what I'm doing with current projects.  I also wanted this 'blog' element to function flexibly, but scale effortlessly."},
+  "body": [ {"paragraph":"Continuing my recent convetion of naming personal projects after old airships from Final Fantasy games, I've decided to name this project, 'Hildegard.'  The idea for Hildegard was rather starightforward - I was tired of having to rebuild my personal website everytime I wanted to feature a new project.  There was just so much copy-pasta every few weeks that I was getting rather annoyed."},
+          {"paragraph":"The next motivation in building this blog was to build a place where I could easily store my thoughts and processes, as well as the occasional ToDo list, to help me keep track of where I'm at and what I'm doing with current projects.  I also wanted this 'blog' element to function flexibly, but scale effortlessly."},
           {"paragraph":"My solution was to build a MEAN stack application that features two main tables: Articles & Projects.  The Articles table populates the blog with all the information you could want for a blog post, but keeps the format open - a 'post' can double as a 'todo list' or more of a 'journal entry', as this post is serving."},
           {"paragraph":"I'm happy to have a place to store my thoughts, and it's been very fulfilling to build an application for my own personal use.  Stretch goals include: fixing date formatting for blog posts and findiing a better solution for scaling my lightbox.  Dates are currently stored in the database in their INT ms form, so I know that I need to convert them back to readable strings at some point.  I just haven't quite figured out where angular wants me to do that.  Working with the JavaScript Date() object is easy enough.  Ideally, I want my lightbox to simply scan a page for images and build a gallery out of whatever is there.  I'm close, but I'm having trouble with the angular code passing values into a seperate JavaScript file.  More research is necessary."} ]
 });
