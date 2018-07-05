@@ -13,7 +13,7 @@ articleList.push({
   "date": 1527034539078,
   "author": "Will Kaspar",
   "body": [ {"paragraph":"This article is a list of things that need to be finished on this website:"},
-          {"paragraph":"blog list implementation | convert date strings to readable format | lightbox window scaling | automate lightbox galleries by page layout; project & process are seperate instances | accent colors? (i like coral) | automate article layout (indents & photos) | "} ]
+          {"paragraph":"blog list implementation | convert date strings to readable format | lightbox window scaling | automate lightbox galleries by page layout; project & process are seperate instances | accent colors? (i like coral) | automate article layout (indents & photos) | about page indents | "} ]
 });
 articleList.push({
   "title": "wakaspar.com - v.3.0: Hildegard",
@@ -168,16 +168,19 @@ projectList.push ({
           {"text":"Open-source library Device handles authorization / authentication"},
           {"text":"Built by Thelma Boamah, Yan Yin Choy, and myself at General Assembly"} ],
   "role": "Full-stack engineer, back-end architecture",
-  "tech": [ {"skill":"Squarespace CMS"},
-          {"skill":"Adobe Photoshop"},
-          {"skill":"Adobe Illustrator"},
+  "tech": [ {"skill":"Ruby On Rails"},
+          {"skill":"Redis"},
+          {"skill":"PostgreSQL"},
+          {"skill":"Heroku"},
           {"skill":"jQuery"},
+          {"skill":"Sass"},
+          {"skill":"CSS3"},
           {"skill":"HTML5"} ],
 "glyphs": [ {"icon":"ruby"},
           {"icon":"rails"},
           {"icon":"redis"},
-          {"icon":"heroku"},
           {"icon":"postgresql"},
+          {"icon":"heroku"},
           {"icon":"jquery"},
           {"icon":"sass"},
           {"icon":"css3"},
