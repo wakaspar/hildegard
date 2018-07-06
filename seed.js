@@ -1,13 +1,25 @@
 var db = require('./models')
 
-// ARTICLES: Currently [0] projects long
+// ARTICLES: Currently [4] articles long
 var articleList = [];
-// PROJECTS: Currently [6] projects long
+// IMAGES: Currently [9] images long
 var imageList = [];
 // PROJECTS: Currently [6] projects long
 var projectList = [];
 
 // articleList: newest --> oldest
+articleList.push({
+  "title": "Teaching Coding in Berkeley </>",
+  "date": 1530830528932,
+  "author": "Will Kaspar",
+  "body": [ {"paragraph":"So, for the last several weeks, I've been teaching coding at a couple of summer camps.  Mostly, I spend my mornings and afternoons teaching ittle-bitty's how to Scratch together blocks and make simple games, but this week, I'm up in Berkeley, teaching a web design and development course to some high schoolers.  It's been absolutely delightful.  The students are smart, they've managed to put together some rad websites, and I'm hella proud of everything that they've learned in a just a week of coding.  They all have some experience with code, but most have simply written Java loops and this is the first time they've approached a custom application.  I'm going to outline our class sequence below:"},
+          {"paragraph":"To start, we got all of our tools set up.  I introduced the Command Prompt (windows machines, oof) as well as Paint (for image editing) and Atom (for text/file editing).  Once that was done, I introduced HTML and CSS, starting by just building out a simple HTML template and explaining how to create and set attributes on an element.  Once that was done, I started adding 'style' attributes to begin our exploration of how CSS can affect our displayed elements.  By the end of the first day, we had html & css files linked together and talking to one another, building out elements and giving them style to make everything pretty.  Next, would come JavaScript, and my three students (Emma, Fawwaz, and Tianyu), couldn't have been more stoked."},
+          {"paragraph":"On the second day, I introduced JavaScript.  We started with basic variable definition and data types, then moved into common patterns such as loops, conditionals, and functions.  I stayed off of constructors, as we talked only briefly about objects. There was an attempt to do some Vanilla JS DOM manipulation, but who really does that anyway?  So, I taught my class how to CDN into jQuery and start setting up event listeners on their pages in a way that isn't buggy as hell and completely infuriating at times.  I was honestly surprised how well that worked, as they picked up event listeners rather easily and began giving their pages interactivity.  'Woah,' I thought, 'I wasn't even sure we were going to make it this far...awesome, let's keep going!  Thus, the decision was made to introduce APIs."},
+          {"paragraph":"We took a break on Wednesday (July 4) and just had a build day.  Work with what you know, let it sink in, get some stuff made.  That was the goal.  I felt like it worked well, and the girls, in particular, used it as an opportunity to deep dive into their projects, the results of which I'm very impressed with.  Thursday morning, I demo'ed my good buddy $.ajax() and his async data-gathering radness by making a page that simply grabs random images of dogs when you hit a button.  It may be one of my favorite pointless apps I've ever built.  There's something totally fun about just looking at random images of dogs.  With all my planned material dished out, on Friday we finished building and I introduced the CMS platforms we used to host our sites.  BitBalloon, in particular, is crazy-simple.  I also demo'ed NeoCities, which is a little less autonomous, but gives you more initial control over how your website is organized on the CMS.  Good stuff, I think they're just excited to be able to put in a URL on any computer and get to see their work. Admittedly, I remember the first time I did that as well, and there's a real sense of accomplishment, a real dopamine hit, that comes along with it."},
+          {"paragraph":"Overall, this as been a rewarding experience for me.  While I have a lot of experience teaching young children, I found teaching high-schoolers to be much more my wheelhouse, especially when teaching tech/coding.  At that age, they just love being given more control and more power over their own lives.  I remember being 15, and I remember that feeling.  I'm just glad that I could help some fellow little nerds hone their passions.  11/10, would do again."},
+          {"paragraph":"That's all I got for today, Kaspar out!"} ]
+});
+
 articleList.push({
   "title": "Hildegard ToDo's",
   "date": 1527034539078,
