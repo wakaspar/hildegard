@@ -7,7 +7,7 @@ var articleList = [
     "date": 1537845379463,
     "author": "Will Kaspar",
     "body": [ {"paragraph":"It's been a while since I wrote anything in here, so I figure it's time to collect some thoughts.  But first, quick updates: after teaching in Berkeley, they moved me to Stanford a couple weeks later to teach high schoolers and middle schoolers.  I'll do a deep-dive of how I iterated the cirriculum and the results in a separate article.  Since then, I've been wrapping up work on a freelance client rebranding effort that I've been working on alongside teaching.  With this wrapped up, I've started interviewing for developer jobs downtown again."},
-            {"paragraph":"So far, I feel like interviews are going well.  I'm still making rookie mistakes here and there - today I learned that my GitHub is severly under-documented and I have a lot of clean-up and documentation to write regarding past and current repos.  That said, this was some of the first honest, straight-forward feedback that I've recieved from any company that I've interviewed with, so I appreciate it greatly. I understand that it's always a risk for a company to give a candidate any kind of feedback, for fear of legal repurcussions.  I'm looking forward to writing my own documentation again - something I havne't really done in earnest since General Assembly days."},
+            {"paragraph":"So far, I feel like interviews are going well.  I'm still making rookie mistakes here and there - today I learned that my GitHub is severly under-documented and I have a lot of clean-up and documentation to write regarding past and current repos.  That said, this was some of the first honest, straight-forward feedback that I've recieved from any company that I've interviewed with, so I appreciate it greatly. I understand that it's always a risk for a company to give a candidate any kind of feedback, for fear of legal repurcussions.  I'm looking forward to writing my own documentation again - something I haven't really done in earnest since General Assembly days."},
             {"paragraph":"Overall, I'm hanging in there.  I really couldn't do it without support from my friends, roommates, and especially my girlfriend - who supports me endlessly.  More specifics about classwork and the like to come soon.  For now, I've "} ]
   },
   {
@@ -185,7 +185,7 @@ var projectList = [
             {"text":"Open-source library Device handles authorization / authentication"},
             {"text":"Built by Thelma Boamah, Yan Yin Choy, and myself at General Assembly"} ],
     "role": "Full-stack engineer, back-end architecture",
-    "tech": [ {"skill":"Ruby On Rails"},
+    "tech": [ {"skill":"Ruby on Rails"},
             {"skill":"Redis"},
             {"skill":"PostgreSQL"},
             {"skill":"Heroku"},
