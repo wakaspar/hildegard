@@ -16,6 +16,19 @@ _"Oh, like a giant Angular template powered by a rudimentary CMS,"_ said my brai
 
 The contents of this repo, Hildegard, are the culmination of those efforts.  The name comes from an airship of Final Fantasy fame, a trend that started for my personal webapps with the previous iteration of this project, [_Highwind_](https://github.com/wakaspar/highwind "Highwind repo").  Let's take a closer look at the architecture.
 
+## Installation & Setup
+This is a pretty standard MEAN stack app, so you can boot accordingly.
+
+Nothing crazy, just make sure you have all your depenedencies in order.
+```
+$ npm install
+$ npm update
+$ cd hildegard
+$ nodemon
+```
+Open your browser to localhost:3000
+
+
 ## Hilde's got a MEAN stack! (ง'-')ง
 MEAN stands for MongoDB - Express - AngularJS - Node.
 ![MEAN](https://www.teaminindia.com/Content/images/meanstack-componants.jpg "basic MEAN stack architecture")
