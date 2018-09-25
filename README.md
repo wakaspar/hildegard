@@ -33,7 +33,7 @@ Open your browser to localhost:3000
 MEAN stands for MongoDB - Express - AngularJS - Node.js
 ![MEAN](https://www.teaminindia.com/Content/images/meanstack-componants.jpg "basic MEAN stack architecture")
 
-### MongoDB
+### MongoDB ![mongodb](https://i.imgur.com/KI74osS.png "mongodb icon")
 
 [MongoDB](https:// "Official Site: MongoDB") is the database library we're employing to store our data (blog articles, projects, artwork) in non-relational documents. Documents work like SQL tables that don't relate to one another.  That said, it is possible to build [references](https://docs.mongodb.com/manual/reference/database-references/ "MongoDB: Database References") from one document to another.  Below are some notes and sketches for the data model abstractions regarding Hildegard:
 
@@ -41,14 +41,14 @@ MEAN stands for MongoDB - Express - AngularJS - Node.js
 
 As you can see, I originally had a stretch goal including a third document, Task, which would essentially store ToDo lists for me.  As I continued to play with the necessary abstractions for this document, however, I realized that it was almost exactly the same document as Article, so ToDo lists are folded into blog articles for the time being, with the plan to eventually have Task extend from Article, inheriting most of it's traits.  The third document became Artwork, which I used to help make a scalable gallery of my drawings and wireframes on the Portfolio page (lightbox bugs withstanding).  Overall, I'm happy with the functionality afforded to me with my current [models](https://github.com/wakaspar/hildegard/tree/master/models "Hildegard: models").
 
-### Node.js & Express
+### Node.js & Express ![nodejs](https://i.imgur.com/oUpXnSs.png "node.js icon")![express](https://i.imgur.com/ovC07tf.png "express icon") 
 This section will be brief, as there are plenty of tutorials and documentation on these two technologies.  [Node.js](https://nodejs.org/en/ "Official Site: Node.js") is the JavaScript run-time environment that we're using to run JS outside of our browsers.  This allows us to spin up local servers inside our computers to test websites locally before deploying them on the internet.  When these sites _do_ go into production, Node gives the structure for those live servers to exist as well.  One of my teachers once described it as *a universe-inside-another-universe*, and I rather like that analogy, so let's roll with it.
 
 :![theRicksMustBeCrazy](http://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/8/02/screen_shot_2015-08-31_at_7.11.47_am.png " sounds like slavery w/ extra steps"):
 
 [Express](http://expressjs.com/ "Official Site: Express") is a Node.js library that extends Node.js with a variety of useful service methods, including some to talk to non-relational databases such as MongoDB.  To this end, we're using Express for two things.  First, we're connecting, as well as reading and writing, to our MongoDB documents.  Second, we're building out an Express API for our Angular front-end to consume.
 
-### AngularJS
+### AngularJS ![angularjs](https://i.imgur.com/Q9NnzDu.png "angular icon")
 [AngularJS](http://angular.io/ "Official Site: AngularJS") is a client-side JavaScript library designed for building scalable, modern, single-page front-end application.  It was developed by Google back in the aughts and they've iterated on it a few times since, but Angular 1 and 4 seem to be the most commonly used, with 1 still being the library that I see the most job postings for.  I often describe it to non-technical folks as a proto-React, even though that's not totally accurate - Angular and React are more like two different approaches to solving the same problem - how do we build user interface that can consume massive amounts of data as easily and transparently as possible?  These technologies have ushered out the age page reloads after each user action, which were so ubiquitous back in the heyday of Rails.
 
 Here are some wireframes from the planning phases of Hildegard's front-end:
