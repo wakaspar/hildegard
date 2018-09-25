@@ -29,8 +29,8 @@ $ nodemon
 Open your browser to localhost:3000
 
 
-## Hilde's got a MEAN stack! (ง'-')ง
-MEAN stands for MongoDB - Express - AngularJS - Node.
+## Architecture ~ Hilde's got a MEAN stack! (ง'-')ง
+MEAN stands for MongoDB - Express - AngularJS - Node.js
 ![MEAN](https://www.teaminindia.com/Content/images/meanstack-componants.jpg "basic MEAN stack architecture")
 
 ### MongoDB
@@ -46,7 +46,7 @@ This section will be brief, as there are plenty of tutorials and documentation o
 
 :![theRicksMustBeCrazy](http://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/8/02/screen_shot_2015-08-31_at_7.11.47_am.png " sounds like slavery w/ extra steps"):
 
-[Express](http://expressjs.com/ "Official Site: Express") is a Node.js library that extends Node.js with methods to talk to non-relational databases such as MongoDB.  To this end, we're using Express for two things.  First, we're connecting, as well as reading and writing, to our MongoDB documents.  Second, we're building out an Express API for our Angular front-end to consume.
+[Express](http://expressjs.com/ "Official Site: Express") is a Node.js library that extends Node.js with a variety of useful service methods, including some to talk to non-relational databases such as MongoDB.  To this end, we're using Express for two things.  First, we're connecting, as well as reading and writing, to our MongoDB documents.  Second, we're building out an Express API for our Angular front-end to consume.
 
 ### AngularJS
 [AngularJS](http://angular.io/ "Official Site: AngularJS") is a client-side JavaScript library designed for building scalable, modern, single-page front-end application.  It was developed by Google back in the aughts and they've iterated on it a few times since, but Angular 1 and 4 seem to be the most commonly used, with 1 still being the library that I see the most job postings for.  I often describe it to non-technical folks as a proto-React, even though that's not totally accurate - Angular and React are more like two different approaches to solving the same problem - how do we build user interface that can consume massive amounts of data as easily and transparently as possible?  These technologies have ushered out the age page reloads after each user action, which were so ubiquitous back in the heyday of Rails.
@@ -90,10 +90,27 @@ In our case, Hildegard's Angular front end makes it easy to craft controllers th
 ```
 So, these 30 lines of HTML render all projects accordingly.  As much data is abstracted out as I can, to ensure that, as long as the JSON objects are fed into the MongoDB correctly, the front-end will render all projects automatically.  Thank goodness!  I was sooo tired of updated my portfolio page all the time, creating more opportunites for bugs.
 
+### Wrap Up
+That's about it for the architecture, we've got MongoDB documents storing the data, with Express and Node moving them through the server's API and into AngularJS, which renders it to the DOM in the browser.
+
+## Tech Used
++ HTML5/CSS3/JavaScript ES6
++ MongoDB
++ Node.js
++ Express
++ AngularJS
++ [SemanticUI](https://semantic-ui.com/ "Official Site: SemanticUI")
++ [DevIcons](https://konpa.github.io/devicon/ "Official Site: DevIcons") (icon library via CDN)
+
 ## ToDo
 Currently, Hildegard ToDo's are stored on the site itself.
 
 ## Conclusion
 Overall, I'm rather happy with Hildegard and where this project is at the moment.  The architecture is strong and the content is scalable.  Moving forward, I'm focused on content creation, finishing lightbox implementation, general bug fixes and aesthetics (making things a bit more flashy & interactive).  I have a lot of ideas and I'm looking forward to seeing what makes the cut.  Thanks for stopping by and checking out this repo.  If you have any questions, comments, or feedback of any nature, feel free to reach out to me at [wakaspar@gmail.com](mailto:wakaspar@gmail.com).
 
+## Credits
+My girlfriend/dogo/roomies/friends <3
+
+## License
+It's always MIT, right? We'll just say it's MIT
 
